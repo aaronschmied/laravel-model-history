@@ -69,10 +69,6 @@ class ChangeTest extends TestCase
             MorphTo::class,
             $this->makeChangeModel()->author()
         );
-
-
-
-
     }
 
     /**

@@ -161,7 +161,4 @@ class Change extends Model
         }
         return $query->where('change_type', '=', $type);
     }
-
-
-
 }

@@ -8,7 +8,6 @@
 
 namespace AaronSchmied\ModelHistory\Traits;
 
-
 use AaronSchmied\ModelHistory\Change;
 use AaronSchmied\ModelHistory\Observers\ChangeObserver;
 

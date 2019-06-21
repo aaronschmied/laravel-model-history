@@ -66,8 +66,12 @@ class ChangeRecorder implements ChangeRecorderContract
                     $beforeValue = $subject->getOriginal($key);
 
                     if (! config('modelhistory.record_timestamps', false)) {
-                        if ($key === $subject->getCreatedAtColumn()) continue;
-                        if ($key === $subject->getUpdatedAtColumn()) continue;
+                        if ($key === $subject->getCreatedAtColumn()) {
+                            continue;
+                        }
+                        if ($key === $subject->getUpdatedAtColumn()) {
+                            continue;
+                        }
                     }
 
                     if ($beforeValue !== $afterValue) {
@@ -76,7 +80,7 @@ class ChangeRecorder implements ChangeRecorderContract
                     }
                 }
 
-            break;
+                break;
         }
         return compact('before', 'after');
     }

@@ -8,7 +8,6 @@
 
 namespace AaronSchmied\ModelHistory\Observers;
 
-
 use AaronSchmied\ModelHistory\Change;
 use AaronSchmied\ModelHistory\Contracts\ChangeRecorder;
 use Illuminate\Database\Eloquent\Model;

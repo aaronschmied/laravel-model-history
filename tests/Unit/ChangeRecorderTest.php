@@ -90,5 +90,4 @@ class ChangeRecorderTest extends TestCase
         $this->assertNull($before['body']);
         $this->assertEquals('Test again', $after['body']);
     }
-
 }
