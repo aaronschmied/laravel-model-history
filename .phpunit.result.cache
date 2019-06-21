@@ -1,1 +1,0 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":266:{a:2:{s:7:"defects";a:2:{s:7:"Warning";i:6;s:77:"Tests\Feature\RecordActivityTest::it_records_activity_when_a_model_is_created";i:4;}s:5:"times";a:2:{s:7:"Warning";d:0.002;s:77:"Tests\Feature\RecordActivityTest::it_records_activity_when_a_model_is_created";d:0.002;}}}
