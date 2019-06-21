@@ -48,7 +48,7 @@ class ChangeRecorder implements ChangeRecorderContract
      *
      * @return array
      */
-    private function getChangesForSubject(Model $subject, $type)
+    public function getChangesForSubject(Model $subject, $type)
     {
         $before = [];
         $after = [];
@@ -62,10 +62,20 @@ class ChangeRecorder implements ChangeRecorderContract
                 $before = $subject->getAttributes();
                 break;
             case Change::TYPE_UPDATED:
-                foreach ($subject->getAttributes() as $key => $_) {
-                    Arr::set($before, $key, $subject->getOriginal($key));
+                foreach ($subject->getAttributes() as $key => $afterValue) {
+                    $beforeValue = $subject->getOriginal($key);
+
+                    if (! config('modelhistory.record_timestamps', false)) {
+                        if ($key === $subject->getCreatedAtColumn()) continue;
+                        if ($key === $subject->getUpdatedAtColumn()) continue;
+                    }
+
+                    if ($beforeValue !== $afterValue) {
+                        Arr::set($before, $key, $beforeValue);
+                        Arr::set($after, $key, $afterValue);
+                    }
                 }
-                $after = $subject->getAttributes();
+
             break;
         }
         return compact('before', 'after');
