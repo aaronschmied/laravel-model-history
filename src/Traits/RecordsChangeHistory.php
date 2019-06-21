@@ -17,7 +17,7 @@ trait RecordsChanges
     /**
      * Register the change observer.
      */
-    public static function bootRecordsChangeHistory()
+    public static function bootRecordsChanges()
     {
         static::observe(ChangeObserver::class);
     }
