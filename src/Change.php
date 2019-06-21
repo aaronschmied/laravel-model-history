@@ -52,6 +52,13 @@ class Change extends Model
     protected $guarded = [];
 
     /**
+     * Disable the timestamps.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * Get the table name.
      *
      * @return string
