@@ -30,7 +30,7 @@ class ChangeRecorder implements ChangeRecorderContract
             'subject_type' => get_class($subject),
             'subject_id' => $subject->getKey(),
 
-            'author_type' => get_class($author) || null,
+            'author_type' => $author ? get_class($author) : null,
             'author_id' => optional($author)->getAuthIdentifier(),
 
             'change_type' => $type,
