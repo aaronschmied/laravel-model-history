@@ -16,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "AaronSchmied\\ModelHistory\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -34,6 +34,8 @@
         "illuminate/config": "^5.8"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.4"
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "^3.5"
     }
 }
