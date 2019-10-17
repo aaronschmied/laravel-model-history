@@ -27,11 +27,11 @@
         }
     },
     "require": {
-        "illuminate/support": "^5.8",
-        "illuminate/database": "^5.8",
-        "illuminate/log": "^5.8",
-        "illuminate/events": "^5.8",
-        "illuminate/config": "^5.8",
+        "illuminate/support": "^5.8|^6.0",
+        "illuminate/database": "^5.8|^6.0",
+        "illuminate/log": "^5.8|^6.0",
+        "illuminate/events": "^5.8|^6.0",
+        "illuminate/config": "^5.8|^6.0",
         "php": "^7.1"
     },
     "require-dev": {
